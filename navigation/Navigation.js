@@ -41,6 +41,7 @@ const MoviesTabNavigator = createBottomTabNavigator({
                     style={styles.icon}
                     tintColor={{ tintColor }}
                     />
+                
                 }
             }
         }
@@ -53,15 +54,7 @@ const MoviesTabNavigator = createBottomTabNavigator({
             inactiveBackgroundColor: '#9973a2',
             showLabel: true,
             showIcon: true,
-            tabStyle: {
-                height: 100
-            },
-            labelStyle: {
-                paddingBottom: 30
-            },
-            style: {
-                marginTop: 10
-            }
+            safeAreaInset: { bottom: 'never', top: 'never' }  // <-- this is the solution
         }
     }
 )

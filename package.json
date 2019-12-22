@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "expo": "~36.0.0",
-    "jshint": "^2.11.0-rc1",
     "moment": "^2.24.0",
     "numeral": "^2.0.6",
     "react": "~16.9.0",
