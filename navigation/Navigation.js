@@ -8,10 +8,22 @@ import FilmDetail from '../components/FilmDetail';
 import Favorites from '../components/Favorites';
 
 const SearchStackNavigator = createStackNavigator({
-    search: {
+    Search: {
         screen: Search,
         navigationOptions: {
             title: 'Rechercher'
+        }
+    },
+    FilmDetail: {
+        screen: FilmDetail
+    }
+})
+
+const FavoritesStackNavigator = createStackNavigator({
+    Favorites: {
+        screen: Favorites,
+        navigationOptions: {
+            title: 'Favoris'
         }
     },
     FilmDetail: {
@@ -33,7 +45,7 @@ const MoviesTabNavigator = createBottomTabNavigator({
         }
     },
     Favorites: {
-        screen: Favorites,
+        screen: FavoritesStackNavigator,
         navigationOptions: {
             tabBarIcon: ({ tintColor }) => {
                 return <Image

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ActivityIndicator, View, Button, TextInput, StyleSheet, FlatList } from 'react-native';
 import FilmItem from './FilmItem';
+import FilmList from './FilmList';
 import { getFilmsFromApiWithSearchedText } from '../API/TMDBApi';
 
 
@@ -18,7 +19,7 @@ class Search extends React.Component {
             isLoading: false
         };
 
-        this.searchedText = "";
+        this._loadFilms = this._loadFilms.bind(this)
     }
 
     _searchFilms() {
@@ -63,7 +64,6 @@ class Search extends React.Component {
     }
 
     _displayDetailForFilm = (idFilm) => {
-        console.log("Display film with id " + idFilm);
         this.props.navigation.navigate("FilmDetail", { idFilm: idFilm });
     }
 
@@ -76,7 +76,7 @@ class Search extends React.Component {
                     onChangeText={(text) => this._searchTextInputChanged(text)}
                     onSubmitEditing={() => this._searchFilms()}/> 
                 <Button title="Rechercher" onPress={() => this._searchFilms()}/>
-                <FlatList
+                {/* <FlatList
                     data={this.state.films}
                     keyExtractor={(item) => item.id.toString()}
                     renderItem={({item}) => <FilmItem film={item} displayDetailForFilm={ this._displayDetailForFilm } />}
@@ -84,6 +84,14 @@ class Search extends React.Component {
                     onEndReached={() => {
                         if (this.page < this.totalPages) { this._loadFilms() }
                     }}
+                /> */}
+                <FilmList
+                    films={this.state.films}
+                    navigation={this.props.navigation}
+                    loadFilms={this._loadFilms}
+                    page={this.page}
+                    totalPages={this.totalPages}
+                    favoriteList={false}
                 />
                 {this._displayLoading()}
             </View>
