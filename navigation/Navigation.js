@@ -48,13 +48,20 @@ const MoviesTabNavigator = createBottomTabNavigator({
     },
     {
         tabBarOptions: {
-            activeBackgroundColor: '#744481',
+            activeBackgroundColor: '#9973a2',
             activeTintColor: 'white',
             inactiveTintColor: '#d8d8d8',
-            inactiveBackgroundColor: '#9973a2',
+            inactiveBackgroundColor: '#744481',
             showLabel: true,
             showIcon: true,
-            safeAreaInset: { bottom: 'never', top: 'never' }  // <-- this is the solution
+            safeAreaInset: { bottom: 'never', top: 'never' },
+            labelStyle:{
+                fontSize: 15,
+                paddingBottom: 15
+            },
+            style: {
+                height: 70
+            }
         }
     }
 )
