@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 class FilmItem extends React.Component {
   render() {
     const { film } = this.props;
-    console.log(this.props.film);
     return (
       <TouchableOpacity style={styles.main_container}
             onPress={() => this.props.displayDetailForFilm(film.item.id)}>
@@ -16,6 +15,12 @@ class FilmItem extends React.Component {
           />
           <View style={styles.content_container}>
             <View style={styles.header_container}>
+              { this.props.isFilmFavorite ? 
+                <Image 
+                  style={ styles.favorite_image }
+                  source={ require('../assets/ic_favorite.png') }
+                />
+              : <Text></Text>}
                 <Text style={styles.title_text}>{film.item.title}</Text>
                 <Text style={styles.vote_text}>{film.item.vote_average}</Text>
             </View>
@@ -75,6 +80,12 @@ const styles = StyleSheet.create({
   date_text: {
       textAlign: 'right',
       fontSize: 14
+  },
+  favorite_image: {
+    marginTop: 5,
+    marginRight: 10,
+    width: 20,
+    height: 15
   }
 })
 

@@ -22,7 +22,7 @@ class FilmDetail extends React.Component {
             this.setState({
                 film: this.props.favoritesFilm[favoriteFilmIndex]
             })
-            return
+            return;
         }
         this.setState({ isLoading: true })
         getFilmDetailFromApi(this.props.navigation.state.params.idFilm)
