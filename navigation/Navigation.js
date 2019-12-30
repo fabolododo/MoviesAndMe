@@ -6,6 +6,7 @@ import { StyleSheet, Image } from 'react-native';
 import Search from '../components/Search';
 import FilmDetail from '../components/FilmDetail';
 import Favorites from '../components/Favorites';
+import Test from '../components/Test';
 
 const SearchStackNavigator = createStackNavigator({
     Search: {
@@ -28,6 +29,15 @@ const FavoritesStackNavigator = createStackNavigator({
     },
     FilmDetail: {
         screen: FilmDetail
+    }
+})
+
+const TestStackNavigator = createStackNavigator({
+    Test: {
+        screen: Test,
+        navigationOptions: {
+            title: 'Test'
+        }
     }
 })
 
@@ -54,9 +64,23 @@ const MoviesTabNavigator = createBottomTabNavigator({
                     tintColor={{ tintColor }}
                     />
                 
-                }
+                
             }
         }
+
+    },
+    Test: {
+        screen: TestStackNavigator,
+        navigationOptions: {
+            tabBarIcon: ({ tintColor }) => {
+                return <Image
+                    source={require('../assets/ic_test.png')}
+                    style={styles.icon}
+                    tintColor= {{ tintColor }}
+                />
+            }
+        }
+    }
     },
     {
         tabBarOptions: {
