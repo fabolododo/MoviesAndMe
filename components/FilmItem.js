@@ -1,37 +1,57 @@
 import React from 'react';
-import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, Image, TouchableOpacity, Animated, Dimensions } from 'react-native';
 import { getImageFromApi } from '../API/TMDBApi';
 import { connect } from 'react-redux';
+import FadeIn from '../animations/FadeIn';
 
 class FilmItem extends React.Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      positionLeft: new Animated.Value(Dimensions.get('window').width)
+    }
+  }
+
+  componentDidMount() {
+    Animated.spring(
+      this.state.positionLeft,
+      {
+        toValue: 0
+      }
+    ).start()
+  }
+
   render() {
     const { film } = this.props;
     return (
-      <TouchableOpacity style={styles.main_container}
-            onPress={() => this.props.displayDetailForFilm(film.item.id)}>
-          <Image
-            style={styles.image}
-            source={{ uri: getImageFromApi(film.item.poster_path) }}
-          />
-          <View style={styles.content_container}>
-            <View style={styles.header_container}>
-              { this.props.isFilmFavorite ? 
-                <Image 
+      <FadeIn>
+        <TouchableOpacity style={styles.main_container}
+              onPress={() => this.props.displayDetailForFilm(film.item.id)}>
+            <Image
+              style={styles.image}
+              source={{ uri: getImageFromApi(film.item.poster_path) }}
+              />
+            <View style={styles.content_container}>
+              <View style={styles.header_container}>
+                { this.props.isFilmFavorite ? 
+                  <Image 
                   style={ styles.favorite_image }
                   source={ require('../assets/ic_favorite.png') }
-                />
-              : <Text></Text>}
-                <Text style={styles.title_text}>{film.item.title}</Text>
-                <Text style={styles.vote_text}>{film.item.vote_average}</Text>
+                  />
+                  : <Text></Text>}
+                  <Text style={styles.title_text}>{film.item.title}</Text>
+                  <Text style={styles.vote_text}>{film.item.vote_average}</Text>
+              </View>
+              <View style={styles.description_container}>
+                <Text style={styles.description_text} numberOfLines={6}>{film.item.overview}</Text>
+              </View>
+              <View style={styles.date_container}>
+                <Text style={styles.date_text}>{film.item.release_date}</Text>
+              </View>
             </View>
-            <View style={styles.description_container}>
-    <Text style={styles.description_text} numberOfLines={6}>{film.item.overview}</Text>
-            </View>
-            <View style={styles.date_container}>
-    <Text style={styles.date_text}>{film.item.release_date}</Text>
-            </View>
-          </View>
-      </TouchableOpacity>
+        </TouchableOpacity>
+      </FadeIn>
     )
   }
 }
