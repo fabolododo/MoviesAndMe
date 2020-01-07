@@ -47,7 +47,7 @@ const MoviesTabNavigator = createBottomTabNavigator({
         navigationOptions: {
             tabBarIcon: ({ tintColor }) => {
                 return <Image
-                    source={require('../assets/ic_search.png')}
+                    source={require('../images/ic_search.png')}
                     style={styles.icon}
                     tintColor={{ tintColor }}
                     />
@@ -59,7 +59,7 @@ const MoviesTabNavigator = createBottomTabNavigator({
         navigationOptions: {
             tabBarIcon: ({ tintColor }) => {
                 return <Image
-                    source={require('../assets/ic_favorite.png')}
+                    source={require('../images/ic_favorite.png')}
                     style={styles.icon}
                     tintColor={{ tintColor }}
                     />
@@ -74,7 +74,7 @@ const MoviesTabNavigator = createBottomTabNavigator({
         navigationOptions: {
             tabBarIcon: ({ tintColor }) => {
                 return <Image
-                    source={require('../assets/ic_test.png')}
+                    source={require('../images/ic_test.png')}
                     style={styles.icon}
                     tintColor= {{ tintColor }}
                 />

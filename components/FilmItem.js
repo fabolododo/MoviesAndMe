@@ -37,7 +37,7 @@ class FilmItem extends React.Component {
                 { this.props.isFilmFavorite ? 
                   <Image 
                   style={ styles.favorite_image }
-                  source={ require('../assets/ic_favorite.png') }
+                  source={ require('../images/ic_favorite.png') }
                   />
                   : <Text></Text>}
                   <Text style={styles.title_text}>{film.item.title}</Text>
