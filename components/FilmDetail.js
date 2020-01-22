@@ -12,14 +12,15 @@ class FilmDetail extends React.Component {
 
         if (params.film != undefined && Platform.OS === 'ios') {
             return {
-                headerRight: <TouchableOpacity
-                                style={styles.share_touchable_headerrightbutton}
-                                onPress={() => params.shareFilm()}>
-                                    <Image
-                                        style={styles.share_image}
-                                        source={require('../images/ic_share.ios.png')} 
-                                    />
-                                </TouchableOpacity>
+                headerRight: 
+                    <TouchableOpacity
+                        style={styles.share_touchable_headerrightbutton}
+                        onPress={() => params.shareFilm()}>
+                            <Image
+                                style={styles.share_image}
+                                source={require('../images/ic_share.ios.png')} 
+                            />
+                    </TouchableOpacity>
             }
         }
     }
