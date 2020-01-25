@@ -1,0 +1,19 @@
+dependencies: \
+  /Users/fabricel/Desktop/Rendu/MoviesAndMe/ios/MoviesAndMe/main.m \
+  /Users/fabricel/Desktop/Rendu/MoviesAndMe/ios/MoviesAndMe/AppDelegate.h \
+  /Users/fabricel/Desktop/Rendu/MoviesAndMe/ios/Pods/Headers/Public/UMReactNativeAdapter/UMModuleRegistryAdapter.h \
+  /Users/fabricel/Desktop/Rendu/MoviesAndMe/ios/Pods/Headers/Public/React-Core/React/RCTBridgeModule.h \
+  /Users/fabricel/Desktop/Rendu/MoviesAndMe/ios/Pods/Headers/Public/React-Core/React/RCTDefines.h \
+  /Users/fabricel/Desktop/Rendu/MoviesAndMe/ios/Pods/Headers/Public/React-Core/React/RCTInspectorDevServerHelper.h \
+  /Users/fabricel/Desktop/Rendu/MoviesAndMe/ios/Pods/Headers/Public/React-Core/React/RCTPackagerConnection.h \
+  /Users/fabricel/Desktop/Rendu/MoviesAndMe/ios/Pods/Headers/Public/UMCore/UMModuleRegistryProvider.h \
+  /Users/fabricel/Desktop/Rendu/MoviesAndMe/ios/Pods/Headers/Public/UMCore/UMModuleRegistry.h \
+  /Users/fabricel/Desktop/Rendu/MoviesAndMe/ios/Pods/Headers/Public/UMCore/UMInternalModule.h \
+  /Users/fabricel/Desktop/Rendu/MoviesAndMe/ios/Pods/Headers/Public/UMCore/UMDefines.h \
+  /Users/fabricel/Desktop/Rendu/MoviesAndMe/ios/Pods/Headers/Public/UMCore/UMExportedModule.h \
+  /Users/fabricel/Desktop/Rendu/MoviesAndMe/ios/Pods/Headers/Public/UMCore/UMViewManager.h \
+  /Users/fabricel/Desktop/Rendu/MoviesAndMe/ios/Pods/Headers/Public/UMCore/UMModuleRegistryDelegate.h \
+  /Users/fabricel/Desktop/Rendu/MoviesAndMe/ios/Pods/Headers/Public/UMCore/UMSingletonModule.h \
+  /Users/fabricel/Desktop/Rendu/MoviesAndMe/ios/Pods/Headers/Public/React-Core/React/RCTBridgeDelegate.h \
+  /Users/fabricel/Desktop/Rendu/MoviesAndMe/ios/Pods/Headers/Public/React-Core/React/RCTJavaScriptLoader.h \
+  /Users/fabricel/Desktop/Rendu/MoviesAndMe/ios/Pods/Headers/Public/UMCore/UMAppDelegateWrapper.h
