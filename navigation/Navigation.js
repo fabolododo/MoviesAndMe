@@ -7,6 +7,19 @@ import Search from '../components/Search';
 import FilmDetail from '../components/FilmDetail';
 import Favorites from '../components/Favorites';
 import Test from '../components/Test';
+import News from '../components/News';
+
+const NewsStackNavigator = createStackNavigator({
+    News: {
+        screen: News,
+        navigationOptions: {
+            title: 'Les derniers films',
+        }
+    },
+    FilmDetail: {
+        screen: FilmDetail
+    }
+})
 
 const SearchStackNavigator = createStackNavigator({
     Search: {
@@ -42,6 +55,18 @@ const TestStackNavigator = createStackNavigator({
 })
 
 const MoviesTabNavigator = createBottomTabNavigator({
+    News: {
+        screen: NewsStackNavigator,
+        navigationOptions: {
+            tabBarIcon: ({ tintColor }) => {
+                return <Image
+                    source={require('../images/ic_fiber_new.png')}
+                    style={styles.icon}
+                    tintColor={{ tintColor }}
+                    />
+            }
+        }
+    },
     Search: {
         screen: SearchStackNavigator,
         navigationOptions: {
