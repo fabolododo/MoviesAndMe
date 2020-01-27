@@ -3,6 +3,7 @@ import { ActivityIndicator, View, Button, TextInput, StyleSheet, FlatList } from
 import FilmItem from './FilmItem';
 import FilmList from './FilmList';
 import { getFilmsFromApiWithSearchedText } from '../API/TMDBApi';
+import Avatar from './Avatar';
 
 
 class Search extends React.Component {
@@ -70,6 +71,11 @@ class Search extends React.Component {
     render() {
         return (
             <View style={ styles.mainContainer }>
+                <View 
+                style={styles.avatar_container}>
+                    <Avatar/>
+                </View>
+
                 <TextInput 
                     style={ styles.textInput } 
                     placeholder="Titre du film"
@@ -119,6 +125,9 @@ const styles = StyleSheet.create ({
         bottom: 0,
         alignItems: 'center',
         justifyContent: 'center'
+    },
+    avatar_container: {
+        alignItems: 'center',
     }
 });
 
