@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Platform, Animated, Easing,PanResponder,Dimensions } from 'react-native';
+import { StyleSheet, View, Platform, Animated, Easing, PanResponder,Dimensions } from 'react-native';
 import HelloWorld from './HelloWorld'
 
 class Test extends React.Component {

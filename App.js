@@ -5,6 +5,7 @@ import Store from './Store/configureStore';
 import { YellowBox } from 'react-native';
 import { persistStore } from 'redux-persist';
 import { PersistGate } from 'redux-persist/es/integration/react';
+import { ThemeStyle } from './styles/ThemeStyle';
 YellowBox.ignoreWarnings(['Remote debugger']);
 
 export default class App extends React.Component {
@@ -13,7 +14,7 @@ export default class App extends React.Component {
     return (
       <Provider store={Store}>
         <PersistGate persistor={persistor}>
-          <Navigation/>
+          <Navigation />
         </PersistGate>
       </Provider>
     )

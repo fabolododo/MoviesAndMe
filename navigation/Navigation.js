@@ -8,6 +8,7 @@ import FilmDetail from '../components/FilmDetail';
 import Favorites from '../components/Favorites';
 import Test from '../components/Test';
 import News from '../components/News';
+import Theme from '../components/Theme';
 
 const NewsStackNavigator = createStackNavigator({
     News: {
@@ -50,6 +51,15 @@ const TestStackNavigator = createStackNavigator({
         screen: Test,
         navigationOptions: {
             title: 'Test'
+        }
+    }
+})
+
+const ThemeStackNavigator = createStackNavigator({
+    Theme: {
+        screen: Theme,
+        navigationOptions: {
+            title: 'Selection du Thème'
         }
     }
 })
@@ -105,8 +115,20 @@ const MoviesTabNavigator = createBottomTabNavigator({
                 />
             }
         }
-    }
     },
+    Theme: {
+        screen: ThemeStackNavigator,
+        navigationOptions: {
+            tabBarIcon: ({ tintColor }) => {
+                return <Image
+                    source={require('../images/ic_test.png')}
+                    style={styles.icon}
+                    tintColor= {{ tintColor }}
+                />
+            }
+        }
+    }
+},
     {
         tabBarOptions: {
             activeBackgroundColor: '#9973a2',
