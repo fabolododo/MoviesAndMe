@@ -80,11 +80,6 @@ class FilmDetail extends React.Component {
             });
     }
 
-    // componentDidUpdate() {
-        // console.log('componentDidUpdate: ');
-        // console.log(this.props.favoritesFilm);
-    // }
-
     _shareFilm() {
         const { film } = this.state;
         Share.share({ title: film.title, message: film.overview });

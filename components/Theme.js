@@ -14,6 +14,7 @@ class Theme extends React.Component {
 
         if (params != undefined && params.toggleTheme === 'dark') { 
             return {
+                headerTintColor: '#fff',
                 headerStyle: {
                     backgroundColor: '#333'
                 }
