@@ -2,19 +2,24 @@ import React from 'react';
 import { Button, Text, StyleSheet, View } from 'react-native';
 import { connect } from 'react-redux';
 import  { ThemeStyle } from '../styles/ThemeStyle'
+import { Appearance, useColorScheme } from 'react-native-appearance';
+
 
 class Theme extends React.Component {
     constructor(props) {
         super(props);
 
+        console.log(Appearance.getColorScheme())
     }
 
     _toggleChangeTheme() {
         let action
         if (this.props.toggleTheme == 'light') {
             action = { type: "TOGGLE_DARK" }
+            this.props.navigation.setParams({ toggleTheme: 'dark' });
         } else {
             action = { type: "TOGGLE_LIGHT" }
+            this.props.navigation.setParams({ toggleTheme: 'light' });
         }
         this.props.dispatch(action);
     }

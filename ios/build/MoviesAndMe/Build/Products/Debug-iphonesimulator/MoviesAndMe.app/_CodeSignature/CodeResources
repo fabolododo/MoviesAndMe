@@ -4,17 +4,21 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Base.lproj/LaunchScreen.nib/objects-13.0+.nib</key>
+		<key>AppIcon60x60@2x.png</key>
 		<data>
-		/1f2lrTTCy0UhnIXaChINw7IFoc=
+		oRV3zGXDExb5Y0V6XcWKikAJwks=
 		</data>
-		<key>Base.lproj/LaunchScreen.nib/runtime.nib</key>
+		<key>Assets.car</key>
 		<data>
-		J+FiELC2PzCqnHdLgeVsz1HDMB8=
+		la09e5NyWAg9isghJc8kalAYwws=
+		</data>
+		<key>Base.lproj/LaunchScreen.nib</key>
+		<data>
+		pCBe/Ai5c6JOKTJ0Ij9U7uePYg8=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Efwu/ZTKjh0IxZBb2eiMDneuMRo=
+		8hwmYw2k1DD9L48ZNBtl2GCOjWs=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -23,26 +27,25 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Base.lproj/LaunchScreen.nib/objects-13.0+.nib</key>
+		<key>AppIcon60x60@2x.png</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			/1f2lrTTCy0UhnIXaChINw7IFoc=
-			</data>
 			<key>hash2</key>
 			<data>
-			hYz9E4NE7349RKgDJkkb2Arz0TAlAK3Lg6waIOQod88=
+			t+J2TA5IOI1MRkzPOLPCJAuKYy6gFIrD5Lwz5T3U/oc=
 			</data>
 		</dict>
-		<key>Base.lproj/LaunchScreen.nib/runtime.nib</key>
+		<key>Assets.car</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			J+FiELC2PzCqnHdLgeVsz1HDMB8=
-			</data>
 			<key>hash2</key>
 			<data>
-			P5TZaH2QLzVDKClKembZCndn1XQyrK/wpZ3kX1fs5BA=
+			xrsan3HBEecMvpFbkC+tzfDDg5iIb0DIxqjafUKARB0=
+			</data>
+		</dict>
+		<key>Base.lproj/LaunchScreen.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			GkL6f0AX+bp+o6abrUhJnU/d5Y6GF0481RowZj0UYb4=
 			</data>
 		</dict>
 	</dict>

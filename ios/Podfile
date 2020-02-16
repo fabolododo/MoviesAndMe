@@ -47,4 +47,6 @@ target 'MoviesAndMe' do
 
   pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
 
+  pod 'react-native-appearance', :path => '../node_modules/react-native-appearance'
+
 end
