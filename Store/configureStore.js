@@ -7,7 +7,8 @@ import AsyncStorage from '@react-native-community/async-storage';
 
 const rootPersistConfig = {
     key: 'root',
-    storage: AsyncStorage
+    storage: AsyncStorage,
+    timeout: null
 }
 
 export default createStore(persistCombineReducers(rootPersistConfig, {toggleFavorite, setAvatar}))

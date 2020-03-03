@@ -14,3 +14,5 @@ web-report/
 .DS_Store
 node_modules
 ios/Pods
+
+android/*
