@@ -11,17 +11,35 @@ class FilmDetail extends React.Component {
         const { params } = navigation.state
 
         if (params.film != undefined && Platform.OS === 'ios') {
-            return {
-                headerRight: 
-                    <TouchableOpacity
-                        style={styles.share_touchable_headerrightbutton}
-                        onPress={() => params.shareFilm()}>
-                            <Image
-                                style={styles.share_image}
-                                source={require('../images/ic_share.ios.png')} 
-                            />
-                    </TouchableOpacity>
+            if (params.toggleTheme === 'dark') { 
+                return {
+                    headerStyle: {
+                        backgroundColor: '#333'
+                    },
+                    headerRight: 
+                        <TouchableOpacity
+                            style={styles.share_touchable_headerrightbutton}
+                            onPress={() => params.shareFilm()}>
+                                <Image
+                                    style={styles.share_image}
+                                    source={require('../images/ic_share.ios.png')} 
+                                />
+                        </TouchableOpacity>
+                }
+            } else {
+                return {
+                    headerRight: 
+                        <TouchableOpacity
+                            style={styles.share_touchable_headerrightbutton}
+                            onPress={() => params.shareFilm()}>
+                                <Image
+                                    style={styles.share_image}
+                                    source={require('../images/ic_share.ios.png')} 
+                                />
+                        </TouchableOpacity>
+                }
             }
+            
         }
     }
 
@@ -43,6 +61,7 @@ class FilmDetail extends React.Component {
     }
 
     componentDidMount() {
+        this.props.navigation.setParams({ toggleTheme: this.props.toggleTheme })
         const favoriteFilmIndex = this.props.favoritesFilm.findIndex(item => item.id === this.props.navigation.state.params.idFilm)
         if (favoriteFilmIndex !== -1) {
             this.setState({
@@ -60,11 +79,6 @@ class FilmDetail extends React.Component {
                 return; 
             });
     }
-
-    // componentDidUpdate() {
-        // console.log('componentDidUpdate: ');
-        // console.log(this.props.favoritesFilm);
-    // }
 
     _shareFilm() {
         const { film } = this.state;
@@ -229,7 +243,8 @@ const styles = StyleSheet.create({
 
 const mapStateToProps = (state) => {
     return {
-        favoritesFilm: state.toggleFavorite.favoritesFilm
+        favoritesFilm: state.toggleFavorite.favoritesFilm,
+        toggleTheme: state.toggleChangeTheme.toggleTheme
     }
 }
 
